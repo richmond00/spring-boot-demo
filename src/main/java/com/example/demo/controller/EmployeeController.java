@@ -20,7 +20,7 @@ public class EmployeeController {
         List<Employee> theEmployee = employeeService.findAll();
         // add to the spring model
         theModel.addAttribute("employees", theEmployee);
-        return "employee/list-employees";
+        return "employees/list-employees";
     }
 
     @GetMapping("/showFormForAdd")
@@ -38,7 +38,7 @@ public class EmployeeController {
         // set employee as a model attribute to pre-populate the form
         theModel.addAttribute("employee", theEmployee);
         // send over to our form
-        return "employee/employee-form";
+        return "employees/employee-form";
     }
 
     @PostMapping("/save")
